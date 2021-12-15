@@ -1,0 +1,333 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body
+{
+    width: 100%;
+    height: auto;
+}
+html
+{
+    scrollbar-width: normal;
+    scrollbar-color: #ace09f #fff1eb;
+}
+html::-webkit-scrollbar
+{
+    width: 2vw;
+}
+html::-webkit-scrollbar-thumb
+{
+    background-color: #ace0f9;
+    border-radius: 16px;
+}
+html::-webkit-scrollbar-track
+{
+    background-color: #fff1eb;
+}
+
+/* Body */
+body
+{
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    font-family: 'Noto Sans Mono', monospace;
+    user-select: none;
+}
+
+/* Container */
+.container
+{
+    position: relative;
+    width: 1500px;
+    height: auto;
+    padding: 10px;
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    border-radius: 16px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Box */
+.container .box
+{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+/* Image */
+.container .box .img
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #d9afd9;
+    border-radius: 50%;
+}
+.container .box .img img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Data */
+.container .box .username
+{
+    position: absolute;
+    bottom: 10px;;
+}
+.container .box .infor
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0s ease;
+}
+.container .box:hover .infor
+{
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 1s ease;
+}
+.container .box .infor span
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 0;
+}
+.container .box:hover .infor span
+{
+    font-size : 20px;
+}
+
+/* Side Bar */
+div.sideBar
+{
+    position: fixed;
+    width: 80px;
+    height: 100%;
+    padding: 6px 14px;
+    background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    display: flex;
+    justify-content: center;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    z-index: 999;
+    transition: all 0.5s ease;
+}
+div.sideBar.active
+{
+    width: 230px;
+}
+div.sideBar .menu
+{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    left: 50%;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+div.sideBar.active .menu
+{
+    left: 80%;
+}
+div.sideBar .menu span
+{
+    position: absolute;
+    text-transform: uppercase;
+    transform: translateX(-170%);
+    opacity: 0;
+}
+div.sideBar.active .menu span
+{
+    opacity: 1;
+}
+/* Menu  */
+div.sideBar ul
+{
+    margin-top: 100px;
+}
+div.sideBar ul li
+{
+    position: relative;
+    margin: 0 5px;
+    list-style: none;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+}
+div.sideBar ul li .tooltip
+{
+    position: absolute;
+    left: 122px;
+    top: 0;
+    transform: translateY(-50%);
+    height: 35px;
+    width: 122px;
+    background: #ffffff;
+    box-shadow: 0 5px 10px rgba(9, 0, 0, 0.2);
+    border-radius: 6px;
+    line-height: 35px;
+    text-align: center;
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+div.sideBar.active ul li .tooltip
+{
+    display: none;
+}
+div.sideBar ul li:hover .tooltip
+{
+    top: 50%;
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+div.sideBar ul li a
+{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 12px;
+    transform: translateX(35%);
+    white-space: nowrap;
+    transition: all 0.5s ease;
+}
+div.sideBar.active ul li a
+{
+    transform: translateX(0);
+}
+div.sideBar.active ul li:hover a
+{
+    color: #30cfd0;
+    background: #ffffff;
+}
+div.sideBar ul li i
+{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+div.sideBar ul li:hover a i
+{
+    color: #30cfd0;
+    background: #ffffff;
+}
+div.sideBar.active ul li:hover a i
+{
+    background: none;
+}
+div.sideBar .item_name
+{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+div.sideBar.active .item_name
+{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Search Box */
+div.sideBar ul li input#search_box
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background: #ace0f9;
+    padding-left: 50px;
+    font-size: 18px;
+    color: #ffffff;
+    transform: translateX(30%);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+div.sideBar.active ul li input#search_box
+{
+    transform: translateX(0);
+    opacity: 1;
+}
+div.sideBar ul li input#search_box::placeholder
+{
+    color: transparent;
+    transition: all 0.5s ease;
+}
+div.sideBar.active ul li input#search_box::placeholder
+{
+    color: #ffffff;
+}
+div.sideBar ul li i.fa-search
+{
+    position: absolute;
+    color: #ffffff;
+    font-size: 20px;
+    transform: translateX(150%);
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+div.sideBar ul li:hover i.fa-search
+{
+    color: #30cfd0;
+    background: #ffffff;
+}
+div.sideBar.active ul li:hover i.fa-search
+{
+    color: #ffffff;
+    background: none;
+}
+div.sideBar.active ul li i.fa-search
+{
+    transform: translateX(0);
+}

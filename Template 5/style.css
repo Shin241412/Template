@@ -1,0 +1,89 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    min-height: 100vh;
+    background-image: url('img/518748PILNC1685min.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 100%;
+    font-family: 'Oswald', sans-serif;
+}
+.container
+{
+    position: relative;
+    display: flex;
+}
+.title
+{
+    position: relative;
+    width: 916px;
+    padding: 30px;
+}
+.title h1
+{
+    position: relative;
+    font-size: 65px;
+    color: #8e44b3;
+}
+.content
+{
+    position: relative;
+    padding: 30px;
+    margin-top: 340px;
+    width: 282px;
+    display: flex;
+    flex-flow: column wrap;
+    margin-left: 100px;
+    gap: 10px;
+}
+.content span
+{
+    position: relative;
+    width: 100%;
+    font-size: 16px;
+    color: #555c66;
+    line-height: 1.6px;
+    font-style: italic;
+    font-family: 'Open Sans', sans-serif;
+}
+span.tel
+{
+    width: 100%;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    color: #333333;
+}
+div#social 
+{
+    position: relative;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 30px;
+}
+div#social i
+{
+    margin: 10px;
+}
+div#social i.fa-facebook-f
+{
+    color: #4e6efc;
+}
+div#social i.fa-twitter
+{
+    color: #5bb5ff;
+}
+div#social i.fa-instagram
+{
+    color: #fc65b0;
+}
+div#social i.fa-youtube
+{
+    color: #f32e2e;
+}

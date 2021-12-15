@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>Admin-Dashboard</title>
+    </head>
+    <body>
+        <!-- Nav Bar -->
+        <div class="nav_bar">
+            <header>
+                <ul class="nav_menu">
+                    <li class="nav_main_items">
+                        <div id="search_box">
+                            <input type="search" name="search" id="search_input" placeholder="Search...">
+                            <i class="fa fa-magnifying-glass" id="search_button"></i>
+                        </div>
+                    </li>
+                    <li class="nav_main_items">
+                        <div class="notification">
+                            <i class="fa fa-bell"></i>
+                            <span class="notice">5</span>
+                        </div>
+                        <ul class="nav_sub_menu">
+                            <span id="title">Notifications</span>
+                            <li>
+                                <div>
+                                    <span class="name">Shin</span>
+                                    <span class="notice_content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                                    <span class="time">10 minutes ago.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="name">Princess</span>
+                                    <span class="notice_content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                                    <span class="time">10 minutes ago.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="name">Princess</span>
+                                    <span class="notice_content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                                    <span class="time">10 minutes ago.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_main_items">
+                        <div id="administrator">
+                            <div id="profiles_avatar">
+                                <img src="img/avatar.svg">
+                            </div>
+                            <span class="name">Shin</span>
+                            <span id="role">Administrator</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <ul class="nav_sub_menu">
+                            <li>
+                                <i class="fa fa-gear"></i>
+                                <span>Settings</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user"></i>
+                                <span>Profiles</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope"></i>
+                                <span>Messages</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-arrow-right-from-bracket"></i>
+                                <span>Logout</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </header>
+        </div>
+        <!-- Side Bar -->
+        <div class="side_bar">
+            <!-- Logo -->
+            <div class="logo">
+                <header>
+                    <div>
+                        <span>Architect</span>
+                        <i class="fa fa-bars" id="menu_button"></i>
+                    </div>
+                </header>
+            </div>
+            <ul>
+                <li class="main_menu">
+                    <span class="main_menu_item">Main Navigation</span>
+                    <ul>
+                        <li class="drop_down">
+                            <div class="main_items">
+                                <i class="fa fa-rocket"></i>
+                                <span>Dashboards</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <span class="tooltip">Dashboards</span>
+                            </div>
+                            <ul class="sub_menu">
+                                <li>
+                                    <span>Analytics</span>
+                                </li>
+                                <li>
+                                    <span>Advertisement</span>
+                                </li>
+                                <li>
+                                    <span>Management</span>
+                                </li>
+                                <li>
+                                    <span>Help Desk</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="drop_down">
+                            <div class="main_items">
+                                <i class="fa fa-pager"></i>
+                                <span>Pages</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <span class="tooltip">Pages</span>
+                            </div>
+                            <ul class="sub_menu">
+                                <li>
+                                    <span>Login</span>
+                                </li>
+                                <li>
+                                    <span>Login Boxed</span>
+                                </li>
+                                <li>
+                                    <span>Register</span>
+                                </li>
+                                <li>
+                                    <span>Register Boxed</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="drop_down">
+                            <div class="main_items">
+                                <i class="fa-solid fa-cubes"></i>
+                                <span>Applications</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <span class="tooltip">Applications</span>
+                            </div>
+                            <ul class="sub_menu">
+                                <li>
+                                    <span>Mailbox</span>
+                                </li>
+                                <li>
+                                    <span>Chat</span>
+                                </li>
+                                <li>
+                                    <span>Material Tabs</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="main_menu">
+                    <span class="main_menu_item">Bootstrap Components</span>
+                    <ul>
+                        <li class="drop_down">
+                            <div class="main_items">
+                                <i class="fa fa-gem"></i>
+                                <span>Elements</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <span class="tooltip">Elements</span>
+                            </div>
+                            <ul class="sub_menu">
+                                <li>
+                                    <span>Standard Buttons</span>
+                                </li>
+                                <li>
+                                    <span>Pills Buttons</span>
+                                </li>
+                                <li>
+                                    <span>Square Buttons</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="drop_down">
+                            <div class="main_items">
+                                <i class="fa fa-car"></i>
+                                <span>Components</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <span class="tooltip">Components</span>
+                            </div>
+                            <ul class="sub_menu">
+                                <li>
+                                    <span>Tabs</span>
+                                </li>
+                                <li>
+                                    <span>Accordions</span>
+                                </li>
+                                <li>
+                                    <span>Notifications</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="drop_down">
+                            <div class="main_items">
+                                <i class="fa fa-rectangle-list"></i>
+                                <span>Form Elements</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <span class="tooltip">Form Elements</span>
+                            </div>
+                            <ul class="sub_menu">
+                                <li>
+                                    <span>Controls</span>
+                                </li>
+                                <li>
+                                    <span>Layouts</span>
+                                </li>
+                                <li>
+                                    <span>Validation</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="drop_down">
+                            <div class="main_items">
+                                <i class="fa fa-shield"></i>
+                                <span>Form Widgets</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <span class="tooltip">Form Widgets</span>
+                            </div>
+                            <ul class="sub_menu">
+                                <li>
+                                    <span>DatePicker</span>
+                                </li>
+                                <li>
+                                    <span>TimePicker</span>
+                                </li>
+                                <li>
+                                    <span>Typeahead</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="drop_down">
+                            <div class="main_items">
+                                <i class="fa fa-table"></i>
+                                <span>Tables</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <span class="tooltip">Tables</span>
+                            </div>
+                            <ul class="sub_menu">
+                                <li>
+                                    <span>Bootstrap 4 Tables</span>
+                                </li>
+                                <li>
+                                    <span>Material Tables</span>
+                                </li>
+                                <li>
+                                    <span>Material Paginator</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="main_menu">
+                    <span class="main_menu_item">Material Components</span>
+                    <ul>
+                        <li class="drop_down">
+                            <div class="main_items">
+                                <i class="fa fa-ribbon"></i>
+                                <span>Form Controls</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <span class="tooltip">Form Controls</span>
+                            </div>
+                            <ul class="sub_menu">
+                                <li>
+                                    <span>Auto Complete</span>
+                                </li>
+                                <li>
+                                    <span>Checkbox</span>
+                                </li>
+                                <li>
+                                    <span>Radio Button</span>
+                                </li>
+                                <li>
+                                    <span>Input</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="drop_down">
+                            <div class="main_items">
+                                <i class="fa fa-atom"></i>
+                                <span>Layout</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <span class="tooltip">Layout</span>
+                            </div>
+                            <ul class="sub_menu">
+                                <li>
+                                    <span>Menu</span>
+                                </li>
+                                <li>
+                                    <span>Cards</span>
+                                </li>
+                                <li>
+                                    <span>Divider</span>
+                                </li>
+                                <li>
+                                    <span>Grid list</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="drop_down">
+                            <div class="main_items">
+                                <i class="fa fa-computer-mouse"></i>
+                                <span>Button & Indicators</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <span class="tooltip">Button & Indicators</span>
+                            </div>
+                            <ul class="sub_menu">
+                                <li>
+                                    <span>Buttons</span>
+                                </li>
+                                <li>
+                                    <span>Button Toggle</span>
+                                </li>
+                                <li>
+                                    <span>Chips</span>
+                                </li>
+                                <li>
+                                    <span>Progress Bar</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="main_menu">
+                    <span class="main_menu_item">Dashboard Box</span>
+                    <ul>
+                        <li class="drop_down">
+                            <div class="main_items">
+                                <i class="fa fa-chart-area"></i>
+                                <span>Chart Boxes</span>
+                                <i class="fa fa-chevron-down"></i>
+                                <span class="tooltip">Chart Boxes</span>
+                            </div>
+                            <ul class="sub_menu">
+                                <li>
+                                    <span>Variation 1</span>
+                                </li>
+                                <li>
+                                    <span>Variation 2</span>
+                                </li>
+                                <li>
+                                    <span>Variation 3</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="main_items">
+                                <i class="fa-solid fa-id-card"></i>
+                                <span>Profile Boxes</span>
+                                <span class="tooltip">Profile Boxes</span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="main_menu">
+                    <span class="main_menu_item">Charts</span>
+                    <ul>
+                        <li>
+                            <div class="main_items">
+                                <i class="fa fa-chart-area"></i>
+                                <span>ChartJS</span>
+                                <span class="tooltip">ChartJS</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="main_items">
+                                <i class="fa fa-chart-pie"></i>
+                                <span>Apex Charts</span>
+                                <span class="tooltip">Apex Charts</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="main_items">
+                                <i class="fa fa-bolt"></i>
+                                <span>Gauges</span>
+                                <span class="tooltip">Gauges</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="main_items">
+                                <i class="fa fa-diagram-project"></i>
+                                <span>Chart Sparklines</span>
+                                <span class="tooltip">Chart Sparklines</span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>

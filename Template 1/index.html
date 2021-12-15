@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Home</title>
+    </head>
+    <body>
+        <!-- Side Bar -->
+        <div class="sideBar">
+            <div class="menu">
+                <i class="fas fa-bars" id="menu_button"></i>
+                <span>Menu</span>
+            </div>
+            <ul>
+                <li>
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search_box" placeholder="Search">
+                    <span class="tooltip">Search</span>
+                </li>
+                <li>
+                    <a id="item_1" href="register.php">
+                        <i class="fas fa-user-plus"></i>
+                        <span class="item_name">Thêm thành viên</span>
+                    </a>
+                    <span class="tooltip">Create</span>
+                </li>
+                <li>
+                    <a id="item_2" href="update.php">
+                        <i class="fas fa-user-edit"></i>
+                        <span class="item_name">Sửa thông tin</span>
+                    </a>
+                    <span class="tooltip">Update</span>
+                </li>
+                <li>
+                    <a id="item_3" href="#">
+                        <i class="fas fa-user-times"></i>
+                        <span class="item_name">Xóa thông tin</span>
+                    </a>
+                    <span class="tooltip">Delete</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Container -->
+        <div class="container">
+            <div class="box">
+                <div class="img">
+                    <!-- <img src=""> -->
+                </div>
+                <div class="username"><?php echo $members['username']?></div>  
+                <div class="infor">
+                    <span id="name"></span>
+                    <span id="age"></span>
+                    <span id="gender"></span>
+                    <span id="information"></span>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

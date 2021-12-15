@@ -1,0 +1,162 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    min-height: 100vh;
+    background: #333333;
+    font-family: 'Open Sans', sans-serif;
+}
+.container
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.container .header
+{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background: #ffffff;
+    display: flex;
+    z-index: 999;
+}
+header
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 60px 0 60px;
+    display: flex;
+    justify-content: space-between;
+}
+header .logo
+{
+    position: relative;
+    width: 64px;
+    height: 32px;
+    margin-top: 22px;
+}
+header .logo img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+header .menu
+{
+    position: relative;
+    width: 179px;
+    height: 36px;
+    margin-top: 22px;
+}
+header .menu ul
+{
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+header .menu ul li
+{
+    list-style: none;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+}
+header .menu ul li.active
+{
+    color: #2c7ffc;
+}
+header .menu ul li:hover
+{
+    color: purple;
+}
+.flex_container
+{
+    width: 1140px;
+    height: 674px;
+    margin: 60px;
+    
+}
+.flex_container .content
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 60px auto 60px 0;
+    display: flex;
+    align-items: center;
+}
+.flex_container .content .title
+{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 30px 45px 30px 45px;
+    color: #ffffff;
+    gap: 26px;
+    font-size: 16px;
+    justify-content: center;
+}
+.flex_container .content .title h2
+{
+    width: 202px;
+    height: auto;
+    margin: 156px auto 0 0; 
+}
+.flex_container .content .title span
+{
+    width: 310px;
+    height: auto;
+}
+.flex_container .content .title small
+{
+    width: 310px;
+    height: auto;
+    font-size: 16px;
+}
+.flex_container .content .title button
+{
+    position: relative;
+    width: 173px;
+    height: 51px;
+    margin-top: 55px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    outline: none;
+}
+.image
+{
+    position: relative;
+    display: flex;
+}
+.image div
+{
+    position: relative;
+    width: 596px;
+    height: 547px;
+}
+.image div img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image div:nth-of-type(2)
+{
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    z-index: -1;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
